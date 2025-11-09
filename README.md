@@ -2,6 +2,8 @@
 
 An interactive web application for learning Vim commands and keybindings, built with React and Vite.
 
+🌐 **[Live Demo](https://npsg02.github.io/learn-vim/)**
+
 ## Features
 
 - **Interactive Lessons**: 5 structured lessons covering Vim basics
@@ -94,6 +96,16 @@ learn-vim/
 - **Vite 6** - Build tool and dev server
 - **ESLint** - Code linting
 - **CSS3** - Styling
+
+## Deployment
+
+This project is automatically deployed to GitHub Pages when changes are pushed to the `main` branch. The deployment workflow:
+
+1. Builds the project using Vite
+2. Uploads the build artifacts
+3. Deploys to GitHub Pages
+
+The live site is available at: https://npsg02.github.io/learn-vim/
 
 ## Contributing
 
