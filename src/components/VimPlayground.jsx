@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+import PropTypes from 'prop-types';
 import './VimPlayground.css';
 
 function VimPlayground({ lesson }) {
@@ -205,5 +206,14 @@ function VimPlayground({ lesson }) {
     </div>
   );
 }
+
+VimPlayground.propTypes = {
+  lesson: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    title: PropTypes.string.isRequired,
+    content: PropTypes.string.isRequired,
+    initialText: PropTypes.string.isRequired,
+  }),
+};
 
 export default VimPlayground;

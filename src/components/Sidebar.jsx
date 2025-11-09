@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import './Sidebar.css';
 
 function Sidebar({ lessons, currentLesson, onLessonSelect }) {
@@ -26,5 +27,17 @@ function Sidebar({ lessons, currentLesson, onLessonSelect }) {
     </div>
   );
 }
+
+Sidebar.propTypes = {
+  lessons: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    title: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+  })).isRequired,
+  currentLesson: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+  }),
+  onLessonSelect: PropTypes.func.isRequired,
+};
 
 export default Sidebar;
